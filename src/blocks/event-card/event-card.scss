@@ -1,0 +1,128 @@
+// В этом файле должны быть стили для БЭМ-блока event-card, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.event-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__viev {
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 65%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__inner {
+    background-color: #fff;
+    padding: 20px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+  }
+
+  &__date-num {
+    font-size: 34px;
+    line-height: 42px;
+    padding-top: 3px;
+  }
+  &__date-num2 {
+    padding-left: 5px;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 300;
+    span {
+      display: block;
+    }
+    .ev-year {
+      font-size: 20px;
+    }
+  }
+
+  &__time {
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    span {
+      white-space: nowrap;
+    }
+  }
+
+  &__watch-icon {
+    
+  }
+
+  &__status {
+    font-size: 18px;
+
+    span {
+      padding-left: 20px;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #1FCD30;
+      }
+    }
+  }
+
+  &__name {
+    font-family: $font-family--serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #515151;
+    margin-bottom: 30px;
+  }
+
+  &__location {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  &__location-icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}

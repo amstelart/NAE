@@ -1,0 +1,44 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/page-header/page-header.html')
+
+-->
+
+<header class="page-header" role="banner">
+  <div class="page-header__inner">
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="">
+    </a>
+    <nav id="main-nav" class="main-nav" role="navigation">
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--active">
+          <a href="#" class="main-nav__link">
+            Об ассоциации
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">
+            Стать экспертом
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">
+            Календарь мероприятий
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">
+            Партнеры
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="page-header__btn-group">
+      <a href="#" class="btn btn-call">+7 (916) 000-30-03</a>
+      <a href="#" class="btn btn-login">Войти  </a>
+      <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+    </div>
+  </div>
+</header>

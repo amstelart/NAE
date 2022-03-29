@@ -1,0 +1,19 @@
+// В этом файле должны быть стили для БЭМ-блока videoar, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.videoar {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    @include row;
+  }
+
+  &__item {
+    @include col();
+    @include col(md, 6);
+
+    margin-bottom: 35px;
+  }
+}

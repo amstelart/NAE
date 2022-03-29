@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока form-question, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form-question {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    @include row;
+  }
+
+  &__col-4 {
+    @include col();
+    @include col(md, 4);
+  }
+  &__col-8 {
+    @include col();
+    @include col(md, 8);
+  }
+}

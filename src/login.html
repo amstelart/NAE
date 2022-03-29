@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NAE</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main">
+
+        <section class="page-intro" style="background-image: url(img/intro-registration-img.jpg);">
+          <div class="container">
+            <a href="#" class="come-back"><svg class="event-card__location-icon" width="30" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#come-back-arrow"></use></svg>Назад</a>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><span class="breadcrumbs__link">Вход в аккаунт</span></li>
+            </ul>
+            <h1 class="page-intro__title">С возвращением!</h1>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section__title-1">
+              <h2>Вход в аккаунт</h2>
+              <span>Log in</span>
+            </div>
+            <form action="" class="login-form">
+              <div class="login-form__row">
+                <div class="login-form__col-6">
+                  <label class="field-text">
+                    <span class="field-text__name">Email:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" placeholder="Введите email" id="">
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Пароль:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="password" placeholder="Введите пароль" id="">
+                    </span>
+                  </label>
+                  <div class="field-link"><a href="#">Забыли пароль?</a></div>
+                  <div class="field-link"><a href="#">Регистрация</a></div>
+                  <div class="field-actions"><button class="btn" type="submit">Зарегистрироваться</button></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

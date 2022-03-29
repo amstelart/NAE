@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NAE</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main">
+
+        <section class="page-intro" style="background-image: url(img/intro-contacts-img.jpg);">
+          <div class="container">
+            <a href="#" class="come-back"><svg class="event-card__location-icon" width="30" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#come-back-arrow"></use></svg>Назад</a>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><span class="breadcrumbs__link">Контакты</span></li>
+            </ul>
+            <h1 class="page-intro__title">Контакты</h1>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section__title-1">
+              <h2>Контакты</h2>
+              <span>Contacts</span>
+            </div>
+            <div class="contacts">
+              <div class="contacts__row">
+                <div class="contacts__info">
+                  <div class="contacts__list">
+                    <div class="contacts__item">
+                      <div class="contacts__item-title">Телефон</div>
+                      <div class="contacts__item-caption">+7 (916) 000-30-03</div>
+                    </div>
+                    <div class="contacts__item">
+                      <div class="contacts__item-title">E-mail</div>
+                      <div class="contacts__item-caption">info@san-kur.ru</div>
+                    </div>
+                    <div class="contacts__item">
+                      <div class="contacts__item-title">Юридический адрес</div>
+                      <div class="contacts__item-caption">105005, Россия, г. Москва, Б. Демидовский пер., д.12, цокольный этаж, пом. Х, часть комн.1</div>
+                    </div>
+                    <div class="contacts__item">
+                      <div class="contacts__item-title">Время работы</div>
+                      <div class="contacts__item-caption">с 9.15 – 18.00, перерыв с 13.00 - 14.00 Выходные: суббота, воскресение</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__map">
+                  <div id="contacts-map">
+                    <img src="img/map-pls.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>
