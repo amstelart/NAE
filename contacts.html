@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>NAE</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt>
+          </a>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Об ассоциации
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Стать экспертом
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Календарь мероприятий
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Партнеры
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="page-header__btn-group">
+            <a href="#" class="btn btn-call">+7 (916) 000-30-03</a>
+            <a href="#" class="btn btn-login">Войти  </a>
+            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+          </div>
+        </div>
+      </header>
+      <main role="main">
+        <section class="page-intro" style="background-image: url(img/intro-contacts-img.jpg);">
+          <div class="container">
+            <a href="#" class="come-back"><svg class="event-card__location-icon" width="30" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#come-back-arrow"/></svg>Назад</a>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><span class="breadcrumbs__link">Контакты</span></li>
+            </ul>
+            <h1 class="page-intro__title">Контакты</h1>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <div class="section__title-1">
+              <h2>Контакты</h2>
+              <span>Contacts</span>
+            </div>
+            <div class="contacts">
+              <div class="contacts__row">
+                <div class="contacts__info">
+                  <div class="contacts__list">
+                    <div class="contacts__item">
+                      <div class="contacts__item-title">Телефон</div>
+                      <div class="contacts__item-caption">+7 (916) 000-30-03</div>
+                    </div>
+                    <div class="contacts__item">
+                      <div class="contacts__item-title">E-mail</div>
+                      <div class="contacts__item-caption">info@san-kur.ru</div>
+                    </div>
+                    <div class="contacts__item">
+                      <div class="contacts__item-title">Юридический адрес</div>
+                      <div class="contacts__item-caption">105005, Россия, г. Москва, Б. Демидовский пер., д.12, цокольный этаж, пом. Х, часть комн.1</div>
+                    </div>
+                    <div class="contacts__item">
+                      <div class="contacts__item-title">Время работы</div>
+                      <div class="contacts__item-caption">с 9.15 – 18.00, перерыв с 13.00 - 14.00 Выходные: суббота, воскресение</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts__map">
+                  <div id="contacts-map">
+                    <img src="img/map-pls.jpg" alt>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="container">
+          <div class="page-footer__top">
+            <div class="page-footer__logo">
+              <img src="img/logo-footer.png" alt>
+            </div>
+            <div class="page-footer__links">
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">АССОЦИАЦИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Об Ассоциации</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Партнеры</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">МЕРОПРИЯТИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Календарь мероприятий</a></li>
+                  <li><a href="#">Практическая деятельность</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">ДЛЯ ПОЛЬЗОВАТЕЛЕЙ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Личный кабинет</a></li>
+                  <li><a href="#">Вступить в Ассоциацию</a></li>
+                  <li><a href="#">Видеоархив</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">ИНФОРМАЦИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Спонсорам</a></li>
+                  <li><a href="#">Вопросы и ответы</a></li>
+                  <li><a href="#">Политика конфиденциальности</a></li>
+                  <li><a href="#">Документы</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="page-footer__bottom">
+            <div class="copyright">Все права защищены © Национальная ассоциация экспертов по санаторно-курортному лечению</div>
+            <div class="copyright-date">2022 год</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
