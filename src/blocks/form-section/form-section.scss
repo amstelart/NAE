@@ -1,22 +1,27 @@
-// В этом файле должны быть стили для БЭМ-блока form-question, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока form-section, его элементов, 
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.form-question {
+.form-section {
 
   $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 80px;
 
   &__row {
     @include row;
   }
 
-  &__col-4 {
+  &__caption,
+  &__form {
     @include col();
     @include col(md, 6);
-    @include col(lg, 4);
+    margin-bottom: 30px;
   }
-  &__col-8 {
-    @include col();
-    @include col(md, 8);
+
+  &__caption {
+    p {
+      font-size: 18px;
+    }
   }
 }

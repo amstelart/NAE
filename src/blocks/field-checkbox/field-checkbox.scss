@@ -39,6 +39,16 @@ $line-height:                 1.375em !default;
 
   &__name-text {
 
+    a {
+      color: #1FAECD;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
     // свой чекбокс с картинкой
 
     // &:before {

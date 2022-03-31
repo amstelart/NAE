@@ -24,6 +24,8 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    position: relative;
   }
 
   &__content {
@@ -48,6 +50,10 @@ body {
   background-color: #F2F7F7;
   margin: 0;
   min-height: 100%;
+
+  &.lock {
+    overflow: hidden !important;
+  }
 }
 
 [tabindex='-1']:focus {
@@ -98,4 +104,8 @@ img {
 .list-unstyled {
   list-style: none;
   padding: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
 }

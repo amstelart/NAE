@@ -9,6 +9,7 @@
       e.preventDefault();
       toggler.classList.toggle('burger--close'); // модификатор иконки (должен быть .burger)
       document.getElementById('main-nav').classList.toggle('main-nav--open');
+      document.body.classList.toggle('lock');
     }
   }
 

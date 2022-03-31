@@ -18,4 +18,20 @@
     @include col();
     @include col(xs, 12);
   }
+
+  .field-actions {
+    text-align: center;
+  }
+
+  .field-checkbox__input-row {
+    @include row;
+
+    .field-checkbox__input-wrap {
+      @include col();
+      @include col(md, 4);
+      margin-top: 0;
+      margin-bottom: 0.6875em
+    }
+  }
+
 }

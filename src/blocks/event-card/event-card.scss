@@ -89,7 +89,13 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background-color: #1FCD30;
+        background-color: #1FAECD;
+      }
+      
+      &.active {
+        &:before {
+          background-color: #1FCD30;
+        }
       }
     }
   }
@@ -124,5 +130,6 @@
 
   &__btn {
     width: 100%;
+    margin-top: 10px;
   }
 }

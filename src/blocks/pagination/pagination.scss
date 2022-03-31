@@ -26,6 +26,10 @@ $border-color:                hsl(0, 0%, 60%) !default;
     text-align: center;
     color: $text-color;
 
+    @media (max-width: ($screen-md - 1)) {
+      font-size: 14px;
+    }
+
     & + & {
       border-left: 0;
     }

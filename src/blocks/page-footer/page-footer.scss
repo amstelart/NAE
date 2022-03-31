@@ -13,16 +13,24 @@
   &__top {
     display: flex;
     padding: 40px 0;
+
+    @media (max-width: ($screen-md - 1)) {
+      display: block;
+      padding: 20px 0;
+    }
   }
 
   &__logo {
     flex-shrink: 0;
-    margin-right: 30px;
     width: 82px;
     height: 81px;
     flex-shrink: 0;
-
+    margin: auto;
+    margin-bottom: 30px;
+    
     @media (min-width: $screen-md) {
+      margin: inherit;
+      margin-right: 30px;
       width: 110px;
       height: 109px;
     }
@@ -85,11 +93,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 0;
-
+    
     @media (max-width: ($screen-lg - 1)) {
+      
+      display: block;
+      text-align: center;
+      padding: 0 0 20px 0;
       
       .copyright {
         margin-bottom: 10px;
+        font-size: 14px;
       }
       .copyright-date {
         margin-bottom: 10px;

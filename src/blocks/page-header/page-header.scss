@@ -11,10 +11,15 @@
   left: 0;
   width: 100%;
   padding: 40px 0;
+
+  @media (max-width: ($screen-xl - 1)) {
+    padding: 20px 0;
+  }
   
   &__inner {
     margin: auto;
     max-width: 1522px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,11 +34,17 @@
       backdrop-filter: none;
       text-decoration: underline;
       font-weight: 700;
+
       &:hover,
       &:focus {
         background: transparent;
       }
+
+      @media (max-width: ($screen-md - 1)) {
+        display: none;
+      }
     }
+
     .btn-login {
       position: relative;
       margin-left: 20px;
@@ -43,6 +54,7 @@
       transition: all $transition-time;
       box-shadow: 0px 0px 27px -4px rgba(255, 255, 255, 0.9);
       padding: $field-padding-vertical 5em $field-padding-vertical $field-padding-horizontal;
+
       &:before {
         content: "";
         width: 27px;
@@ -63,6 +75,10 @@
         border-color: #fff;
         box-shadow: none;
       }
+
+      @media (max-width: ($screen-md - 1)) {
+        // display: none;
+      }
     }
     .burger {
       margin-left: 40px;
@@ -71,5 +87,70 @@
 
   .logo {
     flex-shrink: 0;
+
+    @media (max-width: ($screen-xl - 1)) {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  &.shrink {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(53, 53, 53);
+    background: #23626A;
+    width: 100%;
+    margin: 0;
+    animation: slideInDown  0.5s 1 ease-in-out;
+    z-index: 10;
+    padding: 10px 0;
+
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    .btn-call {
+      font-size: 14px;
+    }
+    .btn-login {
+      padding: 0.8em 3.7em 0.8em 1.2em;
+      font-size: 14px;
+      margin-left: 10px;
+      
+      &:before {
+        width: 20px;
+        height: 22px;
+        top: 9px;
+        right: 15px;
+      }
+    }
+
+
+    @media (min-width:$screen-xl) {
+
+      padding: 10px 0;
+
+      // #{$block-name}__logo {
+      //   width: 50px;
+      //   height: 50px;
+      // }
+      // #{$block-name}__choose-btn {
+      //   padding: 8px 26px;
+      //   font-size: 14px;
+      // }
+    }
+  }
+}
+
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }

@@ -57,9 +57,9 @@ $border-radius:               10px;
   &:disabled {
     opacity: $opacity;
     cursor: not-allowed;
-    color: $text-color;
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    color: #949494;
+    background: #C2C2C2;
+    border: 1px solid #868686;
 
     @at-root a.btn--disabled {
       pointer-events: none;

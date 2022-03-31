@@ -74,7 +74,13 @@
     "main-intro": [],
     "login-form": [],
     "page-intro": [],
-    "form-question": []
+    "form-question": [],
+    "aria-accordion": [],
+    "form-section": [],
+    "sponsor-form": [],
+    "calendar-event": [],
+    "about-actions": [],
+    "registration-action": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

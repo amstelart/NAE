@@ -20,13 +20,21 @@
   }
   &__card-num {
     font-family: $font-family--serif;
-    font-size: 144px;
+    font-size: 94px;
     line-height: 1.3;
     color: #C19F77;
+
+    @media (min-width: $screen-xxl) {
+      font-size: 144px;
+    }
   }
   &__card-text {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 1.1;
+
+    @media (min-width: $screen-xxl) {
+      font-size: 24px;
+    }
   }
 }

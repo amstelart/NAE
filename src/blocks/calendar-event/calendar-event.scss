@@ -1,0 +1,108 @@
+// В этом файле должны быть стили для БЭМ-блока calendar-event, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.calendar-event {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    @include row;
+  }
+
+  &__col {
+    @include col();
+    @include col(md, 6);
+    @include col(lg, 12);
+    @include col(xl, 12);
+
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $screen-lg) {
+    
+    .event-card {
+      display: flex;
+      padding: 34px 55px;
+      background-color: #fff;
+      border-radius: 10px;
+  
+      &__viev {
+        flex-basis: 40%;
+        width: auto;
+        padding-bottom: 0;
+  
+        img {
+          position: static;
+        }
+      }
+      &__inner {
+        padding: 0 0 0 25px;
+        flex-basis: 60%;
+        display: flex;
+        flex-direction: column;
+      }
+  
+      &__body {
+        order: 1;
+      }
+  
+      &__name {
+        font-size: 36px;
+        margin-top: 0;
+      }
+  
+      &__desc {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      
+      &__head {
+        order: 2;
+        flex-wrap: wrap;
+      }
+  
+      &__status {
+        order: 1;
+        flex-grow: 1;
+        flex-basis: 100%;
+        margin-bottom: 5px;
+      }
+  
+      &__date {
+        order: 2;
+      }
+  
+      &__date-num {
+        font-size: 64px;
+      }
+      &__date-num2 {
+        font-size: 24px;
+  
+        .ev-year {
+          font-size: 34px;
+        }
+      }
+  
+      &__time {
+        order: 3;
+        font-size: 28px;
+  
+        .event-card__watch-icon {
+          width: 68px;
+          height: 68px;
+        }
+      }
+      
+      &__action {
+        order: 3;
+        display: flex;
+  
+        .btn:first-child {
+          margin-right: 10px;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}

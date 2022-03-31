@@ -1,0 +1,27 @@
+// В этом файле должны быть стили для БЭМ-блока about-actions, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.about-actions {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-bottom: 120px;
+  text-align: center;
+
+  .btn {
+    margin-bottom: 15px;
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      width: auto;
+      
+      &:first-child {
+        margin-right: 10px;
+      }
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+}

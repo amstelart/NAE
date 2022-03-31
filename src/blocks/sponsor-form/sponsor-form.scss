@@ -1,8 +1,8 @@
-// В этом файле должны быть стили для БЭМ-блока form-question, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока sponsor-form, его элементов, 
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.form-question {
+.sponsor-form {
 
   $block-name:                &; // #{$block-name}__element
 
@@ -10,13 +10,8 @@
     @include row;
   }
 
-  &__col-4 {
+  &__col-6 {
     @include col();
     @include col(md, 6);
-    @include col(lg, 4);
-  }
-  &__col-8 {
-    @include col();
-    @include col(md, 8);
   }
 }

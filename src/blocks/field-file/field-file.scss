@@ -63,6 +63,8 @@ $border-radius:               3px !default;
       padding: $field-padding-vertical  $field-padding-horizontal;
       border-top-left-radius: $border-radius;
       border-bottom-left-radius: $border-radius;
+      background: linear-gradient(180deg, #3CB5C6 0%, #23626A 100%);
+      color: #fff;
     }
 
     &:hover,
