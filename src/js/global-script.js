@@ -22,6 +22,17 @@ $( document ).ready(function() {
       }
   });
   // fix top-menu === end
+
+  $(".main-carousel").owlCarousel({
+    items: 1,
+    nav: true,
+    loop: true,
+    center: true,
+    autoplay:true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause:true,
+    animateOut: 'fadeOut'
+  });
 });
 
 // Изоляция без jQuery

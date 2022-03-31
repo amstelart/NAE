@@ -80,7 +80,9 @@
     "sponsor-form": [],
     "calendar-event": [],
     "about-actions": [],
-    "registration-action": []
+    "registration-action": [],
+    "main-carousel": [],
+    "last-news": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

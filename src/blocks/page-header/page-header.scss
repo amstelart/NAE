@@ -11,6 +11,7 @@
   left: 0;
   width: 100%;
   padding: 40px 0;
+  z-index: 2;
 
   @media (max-width: ($screen-xl - 1)) {
     padding: 20px 0;

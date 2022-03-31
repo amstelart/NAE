@@ -1,0 +1,90 @@
+// В этом файле должны быть стили для БЭМ-блока main-carousel, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main-carousel {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  .owl-stage-outer,
+  .owl-stage {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .owl-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .owl-nav {
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      z-index: 2;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      font-size: 0;
+      span {
+        display: none;
+      }
+    }
+
+    .owl-prev {
+      left: 60px;
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='18' viewBox='0 0 15 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.37114e-07 9L15 17.6603L15 0.339745L4.37114e-07 9Z' fill='%23F7FFFF'/%3E%3C/svg%3E") !important;
+    }
+    .owl-next {
+      right: 60px;
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='18' viewBox='0 0 15 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 9L-8.15666e-07 17.6603L-5.85621e-08 0.339745L15 9Z' fill='%23F7FFFF'/%3E%3C/svg%3E%0A") !important;
+    }
+
+    @media (max-width: 1510px) {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  .owl-dots {
+    @include container;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .owl-dot {
+      width: 85px;
+      height: 3px;
+      background-color: #BBBBBB;
+
+      &.active {
+        background-color: #fff;
+      }
+    }
+  }
+}
