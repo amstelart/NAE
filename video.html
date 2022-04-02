@@ -75,7 +75,42 @@
           </nav>
           <div class="page-header__btn-group">
             <a href="#" class="btn btn-call">+7 (916) 000-30-03</a>
-            <a href="#" class="btn btn-login">Войти  </a>
+            <!-- <a href="#" class="btn btn-login">Войти  </a> -->
+            <div class="dropdown dropdown--login">
+              <a id="dropdown-login" href="#" class="dropdown__toggler btn btn-login" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Войти</a>
+              <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-login">
+                <form action="https://httpbin.org/post" method="post">
+                  <label class="field-text">
+                    <span class="field-text__name">Email:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" placeholder="Введите email" id name>
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Пароль:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="password" placeholder="Введите пароль" id name>
+                    </span>
+                  </label>
+                  <div class="field-checkbox">
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" id name checked>
+                        <span class="field-checkbox__name-text">Запомнить меня</span>
+                      </label>
+                      <div class="field-checkbox__help-text-wrap">
+                        <div class="field-checkbox__help-text">Не рекомендуется на общедоступных компьютерах</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-actions">
+                    <a href="#" class="btn">Войти</a>
+                    <div class="field-link"><a href="#">Вступить в Ассоциацию</a></div>
+                    <div class="field-link"><a href="#">Забыли пароль?</a></div>
+                  </div>
+                </form>
+              </div>
+            </div>
             <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
           </div>
         </div>
@@ -101,54 +136,54 @@
               <div class="videoar__row">
                 <div class="videoar__item">
                   <div class="videoar-card">
-                    <div class="videoar-card__viev embed-responsive  embed-responsive--16-9">
-                      <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                      <img src="img/demo-video-prev.jpg" alt>
+                    </a>
                     <div class="videoar-card__title">Название видео</div>
                     <div class="videoar-card__desc">Описание видео</div>
                   </div>
                 </div>
                 <div class="videoar__item">
                   <div class="videoar-card">
-                    <div class="videoar-card__viev embed-responsive  embed-responsive--16-9">
-                      <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                      <img src="img/demo-video-prev.jpg" alt>
+                    </a>
                     <div class="videoar-card__title">Название видео</div>
                     <div class="videoar-card__desc">Описание видео</div>
                   </div>
                 </div>
                 <div class="videoar__item">
                   <div class="videoar-card">
-                    <div class="videoar-card__viev embed-responsive  embed-responsive--16-9">
-                      <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                      <img src="img/demo-video-prev.jpg" alt>
+                    </a>
                     <div class="videoar-card__title">Название видео</div>
                     <div class="videoar-card__desc">Описание видео</div>
                   </div>
                 </div>
                 <div class="videoar__item">
                   <div class="videoar-card">
-                    <div class="videoar-card__viev embed-responsive  embed-responsive--16-9">
-                      <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                      <img src="img/demo-video-prev.jpg" alt>
+                    </a>
                     <div class="videoar-card__title">Название видео</div>
                     <div class="videoar-card__desc">Описание видео</div>
                   </div>
                 </div>
                 <div class="videoar__item">
                   <div class="videoar-card">
-                    <div class="videoar-card__viev embed-responsive  embed-responsive--16-9">
-                      <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                      <img src="img/demo-video-prev.jpg" alt>
+                    </a>
                     <div class="videoar-card__title">Название видео</div>
                     <div class="videoar-card__desc">Описание видео</div>
                   </div>
                 </div>
                 <div class="videoar__item">
                   <div class="videoar-card">
-                    <div class="videoar-card__viev embed-responsive  embed-responsive--16-9">
-                      <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                      <img src="img/demo-video-prev.jpg" alt>
+                    </a>
                     <div class="videoar-card__title">Название видео</div>
                     <div class="videoar-card__desc">Описание видео</div>
                   </div>

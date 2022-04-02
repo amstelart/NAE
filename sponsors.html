@@ -75,7 +75,42 @@
           </nav>
           <div class="page-header__btn-group">
             <a href="#" class="btn btn-call">+7 (916) 000-30-03</a>
-            <a href="#" class="btn btn-login">Войти  </a>
+            <!-- <a href="#" class="btn btn-login">Войти  </a> -->
+            <div class="dropdown dropdown--login">
+              <a id="dropdown-login" href="#" class="dropdown__toggler btn btn-login" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Войти</a>
+              <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-login">
+                <form action="https://httpbin.org/post" method="post">
+                  <label class="field-text">
+                    <span class="field-text__name">Email:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" placeholder="Введите email" id name>
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Пароль:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="password" placeholder="Введите пароль" id name>
+                    </span>
+                  </label>
+                  <div class="field-checkbox">
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" id name checked>
+                        <span class="field-checkbox__name-text">Запомнить меня</span>
+                      </label>
+                      <div class="field-checkbox__help-text-wrap">
+                        <div class="field-checkbox__help-text">Не рекомендуется на общедоступных компьютерах</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-actions">
+                    <a href="#" class="btn">Войти</a>
+                    <div class="field-link"><a href="#">Вступить в Ассоциацию</a></div>
+                    <div class="field-link"><a href="#">Забыли пароль?</a></div>
+                  </div>
+                </form>
+              </div>
+            </div>
             <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
           </div>
         </div>
@@ -220,7 +255,7 @@
                 <form action class="sponsor-form">
                   <div class="sponsor-form__row">
                     <div class="sponsor-form__col-6">
-                      <label class="field-text">
+                      <label class="field-text field-text--error">
                         <span class="field-text__name">Имя:<span>*</span></span>
                         <span class="field-text__input-wrap">
                           <input class="field-text__input" type="text" placeholder="Введите имя" id>
@@ -236,10 +271,14 @@
                       </label>
                     </div>
                     <div class="sponsor-form__col-6">
-                      <button class="btn" type="submit">Стать спонсором</button>
+                      <a class="btn" href="#request-popup" data-toggle="modal">Стать спонсором</a>
                     </div>
                   </div>
                 </form>
+                <div class="alert  alert--danger">
+                  <svg class="event-card__watch-icon" width="36" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#danger"/></svg>
+                  <p>Поля имя или телефон заполнены некорректно. Пожалуйста, попробуйте еще раз.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -294,6 +333,63 @@
           </div>
         </div>
       </footer>
+    </div>
+  </div>
+  <div id="faq-popup" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog container" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <div class="section__title-1">
+            <h2>Поздравляем</h2>
+            <span>Congratulate</span>
+          </div>
+        </div>
+        <div class="modal__body">
+          <p>Вопрос успешно отправлен! Мы скоро с вами свяжемся.</p>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">На главную</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="request-popup" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog container" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <div class="section__title-1">
+            <h2>Поздравляем</h2>
+            <span>Congratulate</span>
+          </div>
+        </div>
+        <div class="modal__body">
+          <p>Заявка успешно отправлена! Мы скоро с вами свяжемся.</p>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">На главную</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="registration-popup" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog container" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <div class="section__title-1">
+            <h2>Поздравляем</h2>
+            <span>Congratulate</span>
+          </div>
+        </div>
+        <div class="modal__body">
+          <p>Регистрация успешно завершена! Мы скоро с вами свяжемся.</p>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">На главную</button>
+        </div>
+      </div>
     </div>
   </div>
   <script src="js/script.min.js"></script>

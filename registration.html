@@ -75,7 +75,42 @@
           </nav>
           <div class="page-header__btn-group">
             <a href="#" class="btn btn-call">+7 (916) 000-30-03</a>
-            <a href="#" class="btn btn-login">Войти  </a>
+            <!-- <a href="#" class="btn btn-login">Войти  </a> -->
+            <div class="dropdown dropdown--login">
+              <a id="dropdown-login" href="#" class="dropdown__toggler btn btn-login" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Войти</a>
+              <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-login">
+                <form action="https://httpbin.org/post" method="post">
+                  <label class="field-text">
+                    <span class="field-text__name">Email:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" placeholder="Введите email" id name>
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Пароль:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="password" placeholder="Введите пароль" id name>
+                    </span>
+                  </label>
+                  <div class="field-checkbox">
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" id name checked>
+                        <span class="field-checkbox__name-text">Запомнить меня</span>
+                      </label>
+                      <div class="field-checkbox__help-text-wrap">
+                        <div class="field-checkbox__help-text">Не рекомендуется на общедоступных компьютерах</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-actions">
+                    <a href="#" class="btn">Войти</a>
+                    <div class="field-link"><a href="#">Вступить в Ассоциацию</a></div>
+                    <div class="field-link"><a href="#">Забыли пароль?</a></div>
+                  </div>
+                </form>
+              </div>
+            </div>
             <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
           </div>
         </div>
@@ -101,7 +136,7 @@
             <form action class="reg-form">
               <div class="reg-form__row">
                 <div class="reg-form__col-6">
-                  <label class="field-text">
+                  <label class="field-text field-text--error">
                     <span class="field-text__name">Фамилия:<span>*</span></span>
                     <span class="field-text__input-wrap">
                       <input class="field-text__input" type="text" placeholder="Введите фамилию" id>
@@ -317,6 +352,14 @@
                     </span>
                   </label>
                 </div>
+                <div class="reg-form__col-6">
+                  <div class="field-captcha">
+                    <div class="field-captcha__name">Проверка безопасности:<span>*</span></div>
+                    <div class="field-captcha__wrap">
+                      <img src="img/demo-captcha.png" alt>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="reg-form__row">
                 <div class="reg-form__col-12">
@@ -336,10 +379,16 @@
                   </div>
                 </div>
               </div>
-              <div class="reg-form__row">
+              <div class="reg-form__row reg-form__footer">
                 <div class="reg-form__col-12">
                   <div class="field-actions">
-                    <a href="#" class="btn btn--disabled">Зарегистрироваться</a>
+                    <a class="btn" href="#registration-popup" data-toggle="modal">Зарегистрироваться</a>
+                  </div>
+                </div>
+                <div class="reg-form__col-6">                  
+                  <div class="alert  alert--danger">
+                    <svg class="event-card__watch-icon" width="36" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#danger"/></svg>
+                    <p>Некоторые поля заполнены некорректно. Пожалуйста, попробуйте еще раз</p>
                   </div>
                 </div>
               </div>

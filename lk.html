@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>NAE</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt>
+          </a>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Об ассоциации
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Стать экспертом
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Календарь мероприятий
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Партнеры
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="page-header__btn-group">
+            <a href="#" class="btn btn-call">+7 (916) 000-30-03</a>
+            <!-- <a href="#" class="btn btn-login">Войти  </a> -->
+            <div class="dropdown dropdown--login">
+              <a id="dropdown-login" href="#" class="dropdown__toggler btn btn-login" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Войти</a>
+              <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-login">
+                <form action="https://httpbin.org/post" method="post">
+                  <label class="field-text">
+                    <span class="field-text__name">Email:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" placeholder="Введите email" id name>
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Пароль:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="password" placeholder="Введите пароль" id name>
+                    </span>
+                  </label>
+                  <div class="field-checkbox">
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" id name checked>
+                        <span class="field-checkbox__name-text">Запомнить меня</span>
+                      </label>
+                      <div class="field-checkbox__help-text-wrap">
+                        <div class="field-checkbox__help-text">Не рекомендуется на общедоступных компьютерах</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-actions">
+                    <a href="#" class="btn">Войти</a>
+                    <div class="field-link"><a href="#">Вступить в Ассоциацию</a></div>
+                    <div class="field-link"><a href="#">Забыли пароль?</a></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+          </div>
+        </div>
+      </header>
+      <main role="main">
+        <section class="page-intro" style="background-image: url(img/intro-registration-img.jpg);">
+          <div class="container">
+            <a href="#" class="come-back"><svg class="event-card__location-icon" width="30" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#come-back-arrow"/></svg>Назад</a>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><span class="breadcrumbs__link">Личный кабинет</span></li>
+            </ul>
+            <h1 class="page-intro__title">Добро пожаловать!</h1>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <div class="tabs">
+              <ul class="tabs__links" role="tablist">
+                <li class="tabs__link-wrap tabs__link-wrap--active" role="presentation">
+                  <a href="#demo-tab-01" class="tabs__link" data-toggle="tab" role="tab">Личные данные</a>
+                </li>
+                <li class="tabs__link-wrap" role="presentation">
+                  <span data-target="#demo-tab-02" class="tabs__link" data-toggle="tab" role="tab">Безопасность</span>
+                </li>
+              </ul>
+              <div class="tabs__content-wrapper">
+                <div class="tabs__content-item tabs__content-item--active" id="demo-tab-01" role="tabpanel">
+                  <div class="section__title-1">
+                    <h2>Личные данные</h2>
+                    <span>Personal</span>
+                  </div>
+                  <form action class="reg-form">
+                    <div class="reg-form__row">
+                      <div class="reg-form__col-6">
+                        <label class="field-text field-text--error">
+                          <span class="field-text__name">Фамилия:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Введите фамилию" id>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Имя:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Введите имя" id>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="reg-form__row">
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Отчество:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Введите отчество" id>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Дата рождения:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="date" placeholder="Введите дату рождения" id>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="reg-form__row">
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Контактный телефон:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="tel" placeholder="Введите телефон" id>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Email:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="email" placeholder="Введите email" id>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="reg-form__row">
+                      <div class="reg-form__col-12">
+                        <label class="field-text">
+                          <span class="field-text__name">Паспортные данные:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Введите серию и номер паспорта" id>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="reg-form__row">
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Адрес регистрации:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Введите адрес" id>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Место работы:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Введите место работы" id>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="reg-form__row">
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Должность:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Введите должность" id>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Специальность:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Введите вашу специальность" id>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="reg-form__row">
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Год окончания ВУЗа:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="num" placeholder="Введите год окончания ВУЗа" id>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Стаж работы по специальности:<span>*</span></span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Введите ваш стаж работы" id>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="reg-form__row">
+                      <div class="reg-form__col-6">
+                        <div class="field-checkbox">
+                          <div class="field-checkbox__title">Квалификационная категория:</div>
+                          <div class="field-checkbox__input-row">
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id name checked>
+                                <span class="field-checkbox__name-text">Отсутствует</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id name>
+                                <span class="field-checkbox__name-text">Первая</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id name>
+                                <span class="field-checkbox__name-text">Вторая</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id name>
+                                <span class="field-checkbox__name-text">Высшая</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field-checkbox">
+                          <div class="field-checkbox__title">Членство в других профессиональных общественных объединениях: <span>*</span></div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" id name checked>
+                              <span class="field-checkbox__name-text">Нет</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" id name>
+                              <span class="field-checkbox__name-text">Да</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="reg-form__col-6">
+                        <div class="field-checkbox">
+                          <div class="field-checkbox__title">Ученая степень, звание:</div>
+                          <div class="field-checkbox__input-row">
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id name checked>
+                                <span class="field-checkbox__name-text">Нет</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id name>
+                                <span class="field-checkbox__name-text">Д.м.н</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id name>
+                                <span class="field-checkbox__name-text">Профессор</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id name>
+                                <span class="field-checkbox__name-text">К.м.н</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id name>
+                                <span class="field-checkbox__name-text">Доцент</span>
+                              </label>
+                            </div>
+                            <div class="field-checkbox__input-wrap">
+                              <label class="field-checkbox__name">
+                                <input class="field-checkbox__input" type="checkbox" id name>
+                                <span class="field-checkbox__name-text">Академик</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reg-form__row">
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Введите название объединения</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder="Наименование" id>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="reg-form__row">
+                      <div class="reg-form__col-12">
+                        <div class="field-checkbox">
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" id name checked>
+                              <span class="field-checkbox__name-text">Согласен с <a href="#">целями, задачами</a>, и <a href="#">уставом</a> Национальной Ассоциации экспертов по санаторно-курортному лечению</span>
+                            </label>
+                          </div>
+                          <div class="field-checkbox__input-wrap">
+                            <label class="field-checkbox__name">
+                              <input class="field-checkbox__input" type="checkbox" id name>
+                              <span class="field-checkbox__name-text">Согласен на обработку персональных данных, получать рассылки и уведомления*</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reg-form__row reg-form__footer">
+                      <div class="reg-form__col-12">
+                        <div class="field-actions">
+                          <a href="#" class="btn">Сохранить</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reg-form__row">
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Новый пароль:</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder id>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="reg-form__col-6">
+                        <label class="field-text">
+                          <span class="field-text__name">Повторить пароль:</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" placeholder id>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="reg-form__col-12">
+                        <div class="field-actions">
+                          <a href="#" class="btn">Изменить пароль</a>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-02" role="tabpanel">
+                  222
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="container">
+          <div class="page-footer__top">
+            <div class="page-footer__logo">
+              <img src="img/logo-footer.png" alt>
+            </div>
+            <div class="page-footer__links">
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">АССОЦИАЦИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Об Ассоциации</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Партнеры</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">МЕРОПРИЯТИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Календарь мероприятий</a></li>
+                  <li><a href="#">Практическая деятельность</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">ДЛЯ ПОЛЬЗОВАТЕЛЕЙ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Личный кабинет</a></li>
+                  <li><a href="#">Вступить в Ассоциацию</a></li>
+                  <li><a href="#">Видеоархив</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">ИНФОРМАЦИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Спонсорам</a></li>
+                  <li><a href="#">Вопросы и ответы</a></li>
+                  <li><a href="#">Политика конфиденциальности</a></li>
+                  <li><a href="#">Документы</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="page-footer__bottom">
+            <div class="copyright">Все права защищены © Национальная ассоциация экспертов по санаторно-курортному лечению</div>
+            <div class="copyright-date">2022 год</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
