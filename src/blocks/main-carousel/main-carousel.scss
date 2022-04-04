@@ -82,6 +82,10 @@
       height: 3px;
       background-color: #BBBBBB;
 
+      @media (max-width: ($screen-md - 1)) {
+        width: 20%;
+      }
+
       &.active {
         background-color: #fff;
       }

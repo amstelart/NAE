@@ -12,6 +12,7 @@
 
   &__item {
     @include col();
+    @include col(sm, 6);
     @include col(md, 3);
   }
 

@@ -18,6 +18,16 @@
     padding: 140px 0;
   }
 
+  &__title-row {
+    @include row;
+    justify-content: center;
+
+    #{$block-name}__title-1 {
+      @include col();
+      @include col(md, 6);
+    }
+  }
+
   &__title-1 {
     position: relative;
     padding-top: 15px;

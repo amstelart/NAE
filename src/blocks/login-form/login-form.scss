@@ -8,25 +8,83 @@
 
   &__row {
     @include row;
+    justify-content: center;
   }
 
   &__col-6 {
     @include col();
-    @include col(md, 6);
+    @include col(lg, 6);
+    @include col(md, 7);
+
+    #{$block-name}__row {
+
+      #{$block-name}__col-6 {
+        @include col();
+        @include col(lg, 6);
+        @include col(md, 6);
+      }
+    }
   }
 
   .field-link {
     margin-top: 20px;
 
+    @media (min-width: $screen-lg) {
+      margin-top: 26px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: 20px;
+    }
+
     a {
-      font-size: 18px;
+      font-size: 14px;
       color: #1FAECD;
       font-weight: 300;
+
+      @media (min-width: $screen-lg) {
+        font-size: 18px;
+      }
 
       &:hover,
       &:focus {
         text-decoration: none;
       }
+    }
+  }
+
+  .alert {
+    margin-top: 0;
+  }  
+
+  .field-actions {
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .field-checkbox {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .field-checkbox__name-text {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .field-checkbox__help-text-wrap {
+    padding-left: 0;
+    padding-top: 5px;
+  }
+  .field-checkbox__help-text {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .login-form-links {
+    display: flex;
+    justify-content: space-between;
+    
+    @media (min-width: $screen-md) {
+      display: block;
+      text-align: right;
     }
   }
 }

@@ -18,6 +18,11 @@ $line-height:                 1.375em !default;
 
   .btn {
     margin-bottom: ($line-height / 2);
+    min-width: 220px;
+
+    @media (max-width: ($screen-md - 1)) {
+      width: 100%;
+    }
   }
 
   &__text {

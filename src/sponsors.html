@@ -159,7 +159,7 @@
                 <form action="" class="sponsor-form">
                   <div class="sponsor-form__row">
                     <div class="sponsor-form__col-6">
-                      <label class="field-text">
+                      <label class="field-text field-text--error">
                         <span class="field-text__name">Имя:<span>*</span></span>
                         <span class="field-text__input-wrap">
                           <input class="field-text__input" type="text" placeholder="Введите имя" id="">
@@ -175,10 +175,14 @@
                       </label>
                     </div>
                     <div class="sponsor-form__col-6">
-                      <button class="btn" type="submit">Стать спонсором</button>
+                      <a class="btn" href="#request-popup" data-toggle="modal">Стать спонсором</a>
                     </div>
                   </div>
                 </form>
+                <div class="alert  alert--danger">
+                  <svg class="event-card__watch-icon" width="36" height="32"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#danger"></use></svg>
+                  <p>Поля имя или телефон заполнены некорректно. Пожалуйста, попробуйте еще раз.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -193,6 +197,8 @@
     </div>
 
   </div>
+
+  @@include('blocks/modal/modal.html')
 
   @@include('_include/page_bottom.html')
 </body>

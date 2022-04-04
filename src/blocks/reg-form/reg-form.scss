@@ -34,4 +34,12 @@
     }
   }
 
+  &__footer {
+    justify-content: center;
+
+    .alert  {
+      margin-top: 0;
+    }
+  }
+
 }

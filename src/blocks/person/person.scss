@@ -13,6 +13,7 @@
   &__item {
     @include col();
     @include col(md, 4);
+    @include col(sm, 6);
 
     margin-bottom: 30px;
   }
