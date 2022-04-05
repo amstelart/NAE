@@ -14,17 +14,28 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
   display: flex;
   flex-wrap: wrap;
-  margin-top: $line-height;
   margin-bottom: $line-height;
+  margin-top: 70px;
+
+  @media (max-width: ($screen-md - 1)) {
+    margin-top: $line-height;
+  }
+
+  &--center {
+    justify-content: center;
+  }
 
   &__item {
     display: block;
     padding: 0.5em;
     min-width: 2.5em;
     border: 1px solid $border-color;
+    border: none;
     text-decoration: none;
     text-align: center;
     color: $text-color;
+    font-size: 20px;
+    font-weight: 300;
 
     @media (max-width: ($screen-md - 1)) {
       font-size: 14px;
@@ -44,12 +55,48 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
       &:hover,
       &:focus {
-        background-color: $gray-lightest;
+        background-color: darken(#F2F7F7, 3%);
+      }
+    }
+
+
+    &--prev,
+    &--next {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: ($screen-md - 1)) {
+        margin: 0 !important;
+      }
+      svg {
+        flex-shrink: 0;
+
+      }
+      span {
+        text-transform: uppercase;
+
+        @media (max-width: ($screen-md - 1)) {
+          display: none;
+        }
+      }
+    }
+
+    &--prev {
+      margin-right: 30px;
+      svg {
+        margin-right: 10px;
+      }
+    }
+    &--next {
+      margin-left: 30px;
+      svg {
+        margin-left: 10px;
       }
     }
 
     &--active {
-      background-color: $gray-lightest;
+      background-color: darken(#F2F7F7, 3%);
+      color: #1FAECD;
     }
   }
 }
