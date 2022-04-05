@@ -83,7 +83,8 @@
     "registration-action": [],
     "main-carousel": [],
     "last-news": [],
-    "field-captcha": []
+    "field-captcha": [],
+    "sound-btn": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока sound-btn, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.sound-btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  text-decoration: none;
+  display: none;
+  padding: 6px;
+  opacity: 0;
+
+  svg {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      opacity: 0.6;
+    }
+  }
+
+  &--on {
+    display: inline-block;
+    opacity: 1;
+
+    .sound-on {
+      display: block;
+    }
+  }
+  &--off {
+    display: inline-block;
+    opacity: 1;
+
+    .sound-off {
+      display: block;
+    }
+  }
+}
