@@ -23,12 +23,15 @@
     text-align: center;
   }
 
-  .field-checkbox__input-row {
+  .field-checkbox__input-row,
+  .field-radio__input-row {
     @include row;
 
-    .field-checkbox__input-wrap {
+    .field-checkbox__input-wrap,
+    .field-radio__input-wrap {
       @include col();
       @include col(md, 4);
+      @include col(sm, 6);
       margin-top: 0;
       margin-bottom: 0.6875em
     }

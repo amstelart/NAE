@@ -99,8 +99,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: rgb(53, 53, 53);
-    background: #23626A;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(27px);
     width: 100%;
     margin: 0;
     animation: slideInDown  0.5s 1 ease-in-out;
