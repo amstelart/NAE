@@ -117,13 +117,15 @@
       </header>
       <main role="main">
         <section class="page-intro" style="background-image: url(img/intro-registration-img.jpg);">
-          <div class="container">
+          <div class="page-intro__top">
             <a href="#" class="come-back"><svg class="event-card__location-icon" width="30" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#come-back-arrow"/></svg>Назад</a>
             <ul class="breadcrumbs">
               <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
               <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Вступить в ассоциацию</a></li>
               <li class="breadcrumbs__item"><span class="breadcrumbs__link">Заявка на регистрацию</span></li>
             </ul>
+          </div>
+          <div class="container">
             <h1 class="page-intro__title">Заявка на регистрацию</h1>
           </div>
         </section>
@@ -254,89 +256,91 @@
               </div>
               <div class="reg-form__row">
                 <div class="reg-form__col-6">
-                  <div class="field-checkbox">
-                    <div class="field-checkbox__title">Квалификационная категория:</div>
-                    <div class="field-checkbox__input-row">
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id name checked>
-                          <span class="field-checkbox__name-text">Отсутствует</span>
+                  <div class="field-radio">
+                    <div class="field-radio__title">Квалификационная категория:</div>
+                    <div class="field-radio__input-row">
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio" checked>
+                          <span class="field-radio__name-text">Отсутствует</span>
                         </label>
                       </div>
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id name>
-                          <span class="field-checkbox__name-text">Первая</span>
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio">
+                          <span class="field-radio__name-text">Первая</span>
                         </label>
                       </div>
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id name>
-                          <span class="field-checkbox__name-text">Вторая</span>
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio">
+                          <span class="field-radio__name-text">Вторая</span>
                         </label>
                       </div>
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id name>
-                          <span class="field-checkbox__name-text">Высшая</span>
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio">
+                          <span class="field-radio__name-text">Высшая</span>
                         </label>
                       </div>
                     </div>
                   </div>
-                  <div class="field-checkbox">
-                    <div class="field-checkbox__title">Членство в других профессиональных общественных объединениях: <span>*</span></div>
-                    <div class="field-checkbox__input-wrap">
-                      <label class="field-checkbox__name">
-                        <input class="field-checkbox__input" type="checkbox" id name checked>
-                        <span class="field-checkbox__name-text">Нет</span>
-                      </label>
-                    </div>
-                    <div class="field-checkbox__input-wrap">
-                      <label class="field-checkbox__name">
-                        <input class="field-checkbox__input" type="checkbox" id name>
-                        <span class="field-checkbox__name-text">Да</span>
-                      </label>
+                  <div class="field-radio">
+                    <div class="field-radio__title">Членство в других профессиональных общественных объединениях:</div>
+                    <div class="field-radio__input-row">
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio" checked>
+                          <span class="field-radio__name-text">Нет</span>
+                        </label>
+                      </div>
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio">
+                          <span class="field-radio__name-text">Да</span>
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="reg-form__col-6">
-                  <div class="field-checkbox">
-                    <div class="field-checkbox__title">Ученая степень, звание:</div>
-                    <div class="field-checkbox__input-row">
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id name checked>
-                          <span class="field-checkbox__name-text">Нет</span>
+                  <div class="field-radio">
+                    <div class="field-radio__title">Ученая степень, звание:</div>
+                    <div class="field-radio__input-row">
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio" checked>
+                          <span class="field-radio__name-text">Нет</span>
                         </label>
                       </div>
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id name>
-                          <span class="field-checkbox__name-text">Д.м.н</span>
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio">
+                          <span class="field-radio__name-text">Д.м.н</span>
                         </label>
                       </div>
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id name>
-                          <span class="field-checkbox__name-text">Профессор</span>
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio">
+                          <span class="field-radio__name-text">Профессор</span>
                         </label>
                       </div>
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id name>
-                          <span class="field-checkbox__name-text">К.м.н</span>
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio">
+                          <span class="field-radio__name-text">К.м.н</span>
                         </label>
                       </div>
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id name>
-                          <span class="field-checkbox__name-text">Доцент</span>
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio">
+                          <span class="field-radio__name-text">Доцент</span>
                         </label>
                       </div>
-                      <div class="field-checkbox__input-wrap">
-                        <label class="field-checkbox__name">
-                          <input class="field-checkbox__input" type="checkbox" id name>
-                          <span class="field-checkbox__name-text">Академик</span>
+                      <div class="field-radio__input-wrap">
+                        <label class="field-radio__name">
+                          <input class="field-radio__input" type="radio" id name="demo-radio">
+                          <span class="field-radio__name-text">Академик</span>
                         </label>
                       </div>
                     </div>
