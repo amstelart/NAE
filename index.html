@@ -6,6 +6,7 @@
   <meta name="description" content>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
   <link href="css/style.min.css" rel="stylesheet" media="screen">
   <script>
     // Маркер работающего javascript
@@ -49,28 +50,130 @@
           <a href="index.html" class="logo">
             <img src="img/logo.png" alt>
           </a>
+          <ul class="desktop-nav">
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Об ассоциации</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Стать экспертом</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Календарь мероприятий</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Партнеры</a>
+            </li>
+          </ul>
           <nav id="main-nav" class="main-nav" role="navigation">
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active">
-                <a href="#" class="main-nav__link">
-                  Об ассоциации
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Стать экспертом
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Календарь мероприятий
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Партнеры
-                </a>
-              </li>
+              <div class="container">
+                <div class="main-nav__row">
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Ассоциация
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Об Ассоциации
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Контакты
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Партнеры
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Мероприятия
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Календарь мероприятий
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Практическая деятельность
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Для пользователей
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Личный кабинет
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Вступить в Ассоциацию
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Видеоархив
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Информация
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Спонсорам
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Вопросы и ответы
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Документы
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Политика конфиденциальности
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                </div>
+              </div>
             </ul>
           </nav>
           <div class="page-header__btn-group">
@@ -125,19 +228,19 @@
           </div>
           <div class="container main-intro__inner">
             <h1 class="main-intro__title">
-              <div>Национальная</div>
-              <div>Ассоциация</div>
-              <div>Экспертов</div>
+              <div class="wow fadeInUp">Национальная</div>
+              <div class="wow fadeInUp" data-wow-delay="0.2s">Ассоциация</div>
+              <div class="wow fadeInUp" data-wow-delay="0.5s">Экспертов</div>
             </h1>
-            <div class="main-intro__text">По санаторно-курортному лечению</div>
-            <div class="main-intro__action">
+            <div class="main-intro__text wow fadeInUp" data-wow-delay="0.7s">По санаторно-курортному лечению</div>
+            <div class="main-intro__action wow fadeInUp" data-wow-delay="1s">
               <a href="#" class="btn">Подробнее</a>
               <a href class="sound-btn sound-btn--on">
                 <svg class="sound-on" width="42" height="42"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#sound-on"/></svg>
                 <svg class="sound-off" width="42" height="42"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#sound-off"/></svg>
               </a>
             </div>
-            <div class="last-news">
+            <div class="last-news wow fadeInUp" data-wow-delay="1s">
               <div class="last-news__item">
                 <div class="last-news-card">
                   <div class="last-news-card__title">Последние новости</div>
@@ -169,15 +272,15 @@
         </section>
         <section class="section">
           <div class="container">
-            <div class="section__title-1">
+            <div class="section__title-1 wow fadeInUp">
               <h2>ОБРАЩЕНИЕ ПРЕЗИДЕНТА АССОЦИАЦИИ</h2>
               <span>President</span>
             </div>
-            <div class="main-message">
+            <div class="main-message wow fadeInUp">
               <div class="main-message__image">
                 <img src="img/main-message-img.jpg" alt>
               </div>
-              <div class="main-message__caption">
+              <div class="main-message__caption wow fadeInUp">
                 <h2>Уважаемые коллеги!</h2>
                 <p>Рады привeтствовать Вас на сайте Национальной ассоциации экспертов по санаторно-курортному лечению.</p>
                 <p>Главной целью деятельности Национальной ассоциации экспертов по санаторно-курортному лечению является представление и обеспечение защиты законных прав и общих интересов членов Национальной ассоциации экспертов по санаторно-курортному лечению в государственных и иных органах и организациях на территории Российской Федерации и за ее пределами. Ассоциация заявляет о своей готовности нести ответственность за каждого своего члена. Но и каждый член Ассоциации обязан выполнять утверждённые и выверенные профессиональными медицинскими ассоциациями стандарты лечения и этические нормы поведения.</p> 
@@ -189,12 +292,12 @@
         </section>
         <section class="section">
           <div class="container">
-            <div class="section__title-1">
+            <div class="section__title-1 wow fadeInUp">
               <h2>БЛИЖАЙШИЕ МЕРОПРИЯТИЯ</h2>
               <span>Event</span>
             </div>
             <div class="coming-event">
-              <div class="coming-event__row">
+              <div class="coming-event__row wow fadeInUp">
                 <div class="coming-event__col">
                   <div class="event-card">
                     <div class="event-card__viev">
@@ -300,11 +403,11 @@
         </section>
         <section class="section">
           <div class="container">
-            <div class="section__title-1">
+            <div class="section__title-1 wow fadeInUp">
               <h2>НАШИ ПАРТНЕРЫ</h2>
               <span>Partners</span>
             </div>
-            <div class="partners">
+            <div class="partners wow fadeInUp">
               <div class="partners__list">
                 <div class="partners__item">
                   <a href="#" class="partners__logo"><img src="img/test-logo-03.png" alt></a>

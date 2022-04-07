@@ -6,6 +6,7 @@
   <meta name="description" content>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
   <link href="css/style.min.css" rel="stylesheet" media="screen">
   <script>
     // Маркер работающего javascript
@@ -49,28 +50,130 @@
           <a href="index.html" class="logo">
             <img src="img/logo.png" alt>
           </a>
+          <ul class="desktop-nav">
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Об ассоциации</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Стать экспертом</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Календарь мероприятий</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Партнеры</a>
+            </li>
+          </ul>
           <nav id="main-nav" class="main-nav" role="navigation">
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active">
-                <a href="#" class="main-nav__link">
-                  Об ассоциации
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Стать экспертом
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Календарь мероприятий
-                </a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Партнеры
-                </a>
-              </li>
+              <div class="container">
+                <div class="main-nav__row">
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Ассоциация
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Об Ассоциации
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Контакты
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Партнеры
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Мероприятия
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Календарь мероприятий
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Практическая деятельность
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Для пользователей
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Личный кабинет
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Вступить в Ассоциацию
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Видеоархив
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Информация
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Спонсорам
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Вопросы и ответы
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Документы
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Политика конфиденциальности
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                </div>
+              </div>
             </ul>
           </nav>
           <div class="page-header__btn-group">
@@ -125,18 +228,18 @@
             </ul>
           </div>
           <div class="container">
-            <h1 class="page-intro__title">Видеоархив</h1>
+            <h1 class="page-intro__title wow fadeInUp">Видеоархив</h1>
           </div>
         </section>
         <section class="section">
           <div class="container">
-            <div class="section__title-1">
+            <div class="section__title-1 wow fadeInUp">
               <h2>Видеоархив</h2>
               <span>Video</span>
             </div>
             <div class="videoar">
               <div class="videoar__row">
-                <div class="videoar__item">
+                <div class="videoar__item wow fadeInUp">
                   <div class="videoar-card">
                     <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                       <img src="img/demo-video-prev.jpg" alt>
@@ -145,7 +248,7 @@
                     <div class="videoar-card__desc">Описание видео</div>
                   </div>
                 </div>
-                <div class="videoar__item">
+                <div class="videoar__item wow fadeInUp">
                   <div class="videoar-card">
                     <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                       <img src="img/demo-video-prev.jpg" alt>
@@ -154,7 +257,7 @@
                     <div class="videoar-card__desc">Описание видео</div>
                   </div>
                 </div>
-                <div class="videoar__item">
+                <div class="videoar__item wow fadeInUp">
                   <div class="videoar-card">
                     <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                       <img src="img/demo-video-prev.jpg" alt>
@@ -163,7 +266,7 @@
                     <div class="videoar-card__desc">Описание видео</div>
                   </div>
                 </div>
-                <div class="videoar__item">
+                <div class="videoar__item wow fadeInUp">
                   <div class="videoar-card">
                     <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                       <img src="img/demo-video-prev.jpg" alt>
@@ -172,7 +275,7 @@
                     <div class="videoar-card__desc">Описание видео</div>
                   </div>
                 </div>
-                <div class="videoar__item">
+                <div class="videoar__item wow fadeInUp">
                   <div class="videoar-card">
                     <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                       <img src="img/demo-video-prev.jpg" alt>
@@ -181,7 +284,7 @@
                     <div class="videoar-card__desc">Описание видео</div>
                   </div>
                 </div>
-                <div class="videoar__item">
+                <div class="videoar__item wow fadeInUp">
                   <div class="videoar-card">
                     <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
                       <img src="img/demo-video-prev.jpg" alt>
