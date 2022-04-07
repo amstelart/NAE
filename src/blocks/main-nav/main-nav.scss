@@ -28,45 +28,78 @@ $transition-time:             0.3s !default;
   //   display: none;
   // }
 
+  .container {
+    display: flex;
+    align-items: center;
+    padding-top: 95px;
+
+
+    @media (min-width: $screen-lg) {
+      padding-top: 100px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 120px;
+    }
+  }
+
+  &__row {
+    @include row;
+    width: 100%;
+  }
+
+  &__col {
+    @include col();
+    @include col(md, 6);
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 60px;
+    }
+  }
+
   // первый уровень
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 
+    // открытие/закрытие меню только в случае работающего JS
+
+    .js & {
+      overflow: auto;
+      max-height: 0;
+      transition: max-height 0.2s;
+      top: -100%;
+      left: 0;
+      position: fixed;
+    }
+
+    .js #{$block-name}--open & {
+      max-height: 100vh;
+      transition: max-height 0.6s;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      // background-color: #23626A;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(16px);
+    }
     // мобильный вид списка
     @media (max-width: ($menu-desktop-width - 1)) {
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      // открытие/закрытие меню только в случае работающего JS
-
-      .js & {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s;
-        top: -100%;
-        left: 0;
-        position: fixed;
-      }
-
-      .js #{$block-name}--open & {
-        max-height: 100vh;
-        transition: max-height 0.6s;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #23626A;
-      }
     }
 
     // настольный вид списка
-    @media (min-width: $menu-desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
+    // @media (min-width: $menu-desktop-width) {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    // }
+
+    &--lvl-2 {
+      display: block;
     }
   }
 
@@ -83,10 +116,13 @@ $transition-time:             0.3s !default;
   }
 
   &__link {
+    font-family: "Cinzel", serif;
+    text-transform: uppercase;
     display: block;
-    padding: 0.5em 1.7em;
+    padding: 0.5em 0;
     text-decoration: none;
     color: #fff;
+    font-size: 22px;
     // background-color: #fff;
 
     &:hover,
@@ -94,73 +130,43 @@ $transition-time:             0.3s !default;
       text-decoration: none;
     }
 
-    @media (max-width: ($menu-desktop-width - 1)) {
-      text-transform: uppercase;
-      font-weight: 300;
-      padding: 0.7em 1.7em;
-    }
-
-    &--lvl-2 {
-
-      @media (max-width: ($menu-desktop-width - 1)) {
-        padding-left: 1.2em;
-      }
-    }
-
-    &--lvl-3 {
-
-      @media (max-width: ($menu-desktop-width - 1)) {
-        padding-left: 2.4em;
-      }
+    @media (min-width: $screen-xl) {
+      font-size: 42px;
     }
   }
 
   &__sublist-wrapper {
+    margin-top: 20px;
 
-    &--lvl-2 {
+    @media (min-width: $screen-xl) {
+      margin-top: 55px;
+    }
+  }
 
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
+  &__sublist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-        // stylelint-disable  max-nesting-depth
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-        // stylelint-enable
-      }
+  &__sublist-item {
+
+  }
+  &__sublist-link {
+    font-size: 16px;
+    font-weight: 300;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 0;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
 
-    &--lvl-3 {
-
-      @media (min-width: $menu-desktop-width) {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 100%;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: opacity $transition-time;
-
-        // stylelint-disable  max-nesting-depth
-        #{$block-name}__item--show-child > &,
-        #{$block-name}__item--lvl-2:hover & {
-          opacity: 1;
-          height: auto;
-          overflow: visible;
-        }
-        // stylelint-enable
-      }
+    @media (min-width: $screen-xl) {
+      font-size: 24px;
     }
   }
 
@@ -180,8 +186,51 @@ $transition-time:             0.3s !default;
       display: none;
     }
 
-    @media (min-width: $menu-desktop-width) {
-      display: none;
+    // @media (min-width: $menu-desktop-width) {
+    //   display: none;
+    // }
+  }
+}
+
+
+.desktop-nav {
+  display: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  @media (min-width: 1115px) {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+
+    &--active {
+
+      & > .desktop-nav__link {
+        color: #fff;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    display: block;
+    padding: 0.5em 1.2em;
+    text-decoration: none;
+    color: #fff;
+    // background-color: #fff;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    @media (min-width: 1270px) {
+      font-size: 18px;
+      padding: 0.5em 1.7em;
     }
   }
 }

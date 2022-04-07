@@ -1,4 +1,5 @@
 // Если на проекте jQuery
+new WOW().init();
 $( document ).ready(function() {
   // code
   $('.accordion-group').ariaAccordion({

@@ -13,33 +13,6 @@
     }
   }
 
-  // Добавление/удаление модификаторов при фокусировке на ссылочном элементе
-  var linkClassName = 'main-nav__link';
-  var linkClassNameShowChild = 'main-nav__item--show-child';
-  var findLinkClassName = new RegExp(linkClassName);
-  // Слежение за всплывшим событием focus (нужно добавить класс, показывающий потомков)
-  document.addEventListener('focus', function(event) {
-    // Если событие всплыло от одной из ссылок гл. меню
-    if (findLinkClassName.test(event.target.className)) {
-      // Добавим классы, показывающие списки вложенных уровней, на всех родителей
-      event.target.parents('.main-nav__item').forEach(function(item){
-        item.classList.add(linkClassNameShowChild);
-      });
-    }
-  }, true);
-  // Слежение за всплывшим событием blur (нужно убрать класс, показывающий потомков)
-  document.addEventListener('blur', function(event) {
-    // Если событие всплыло от одной из ссылок гл. меню
-    if (findLinkClassName.test(event.target.className)) {
-      // Уберем все классы, показывающие списки 2+ уровней
-      // event.target.closest('.main-nav').querySelectorAll('.'+linkClassNameShowChild).forEach(function(item){
-      document.querySelectorAll('.'+linkClassNameShowChild).forEach(function(item){
-        item.classList.remove(linkClassNameShowChild);
-      });
-    }
-  }, true);
-
-
 
   // Добавление метода .parents()
   Element.prototype.parents = function(selector) {
