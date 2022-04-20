@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>NAE</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content page__content--error" style="background-image: url(img/intro-error-img.jpg);">
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <a href="index.html" class="logo">
+            <img src="img/logo.svg" alt>
+          </a>
+          <ul class="desktop-nav">
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Об ассоциации</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Стать экспертом</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Календарь мероприятий</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Партнеры</a>
+            </li>
+          </ul>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <div class="container">
+                <div class="main-nav__row">
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Ассоциация
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Об Ассоциации
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Контакты
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Партнеры
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Мероприятия
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Календарь мероприятий
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Практическая деятельность
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Для пользователей
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Личный кабинет
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Вступить в Ассоциацию
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Видеоархив
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Информация
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Спонсорам
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Вопросы и ответы
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Документы
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Политика конфиденциальности
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </nav>
+          <div class="page-header__btn-group">
+            <a href="#" class="btn btn-call">+7 (916) 000-30-03</a>
+            <!-- <a href="#" class="btn btn-login">Войти  </a> -->
+            <div class="dropdown dropdown--login">
+              <a id="dropdown-login" href="#" class="dropdown__toggler btn btn-login" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Войти</a>
+              <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-login">
+                <form action="https://httpbin.org/post" method="post">
+                  <label class="field-text">
+                    <span class="field-text__name">Email:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" placeholder="Введите email" id name>
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Пароль:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="password" placeholder="Введите пароль" id name>
+                    </span>
+                  </label>
+                  <div class="field-checkbox">
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" id name checked>
+                        <span class="field-checkbox__name-text">Запомнить меня</span>
+                      </label>
+                      <div class="field-checkbox__help-text-wrap">
+                        <div class="field-checkbox__help-text">Не рекомендуется на общедоступных компьютерах</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-actions">
+                    <a href="#" class="btn">Войти</a>
+                    <div class="field-link"><a href="#">Вступить в Ассоциацию</a></div>
+                    <div class="field-link"><a href="#">Забыли пароль?</a></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+          </div>
+        </div>
+      </header>
+      <main role="main">
+        <section class="section">
+          <div class="container">
+            <div class="error-box">
+              <div class="error-box__text">Мы не можем найти страницу, которую вы ищете :(</div>
+              <div class="error-box__title">404</div>
+              <a href="index.html" class="btn error-box__btn">На главную страницу</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="container">
+          <div class="page-footer__top">
+            <div class="page-footer__logo">
+              <img src="img/logo.svg" alt>
+            </div>
+            <div class="page-footer__links">
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">АССОЦИАЦИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Об Ассоциации</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Партнеры</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">МЕРОПРИЯТИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Календарь мероприятий</a></li>
+                  <li><a href="#">Практическая деятельность</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">ДЛЯ ПОЛЬЗОВАТЕЛЕЙ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Личный кабинет</a></li>
+                  <li><a href="#">Вступить в Ассоциацию</a></li>
+                  <li><a href="#">Видеоархив</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">ИНФОРМАЦИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Спонсорам</a></li>
+                  <li><a href="#">Вопросы и ответы</a></li>
+                  <li><a href="#">Политика конфиденциальности</a></li>
+                  <li><a href="#">Документы</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="page-footer__bottom">
+            <div class="copyright">Все права защищены © Национальная ассоциация экспертов по санаторно-курортному лечению</div>
+            <div class="copyright-date">2022 год</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div id="faq-popup" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog container" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <div class="section__title-1">
+            <h2>Поздравляем</h2>
+            <span>Congratulate</span>
+          </div>
+        </div>
+        <div class="modal__body">
+          <p>Вопрос успешно отправлен! Мы скоро с вами свяжемся.</p>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">На главную</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="request-popup" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog container" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <div class="section__title-1">
+            <h2>Поздравляем</h2>
+            <span>Congratulate</span>
+          </div>
+        </div>
+        <div class="modal__body">
+          <p>Заявка успешно отправлена! Мы скоро с вами свяжемся.</p>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">На главную</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="registration-popup" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog container" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <div class="section__title-1">
+            <h2>Поздравляем</h2>
+            <span>Congratulate</span>
+          </div>
+        </div>
+        <div class="modal__body">
+          <p>Регистрация успешно завершена! Мы скоро с вами свяжемся.</p>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">На главную</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>NAE</title>
+  <meta name="description" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <a href="index.html" class="logo">
+            <img src="img/logo.svg" alt>
+          </a>
+          <ul class="desktop-nav">
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Об ассоциации</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Стать экспертом</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Календарь мероприятий</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Партнеры</a>
+            </li>
+          </ul>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <div class="container">
+                <div class="main-nav__row">
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Ассоциация
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Об Ассоциации
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Контакты
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Партнеры
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Мероприятия
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Календарь мероприятий
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Практическая деятельность
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Для пользователей
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Личный кабинет
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Вступить в Ассоциацию
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Видеоархив
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                  <div class="main-nav__col">
+                    <li class="main-nav__item">
+                      <a href class="main-nav__link">
+                        Информация
+                      </a>
+                      <div class="main-nav__sublist-wrapper">
+                        <ul class="main-nav__sublist">
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Спонсорам
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Вопросы и ответы
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Документы
+                            </a>
+                          </li>
+                          <li class="main-nav__sublist-item">
+                            <a href class="main-nav__sublist-link">
+                              Политика конфиденциальности
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </nav>
+          <div class="page-header__btn-group">
+            <a href="#" class="btn btn-call">+7 (916) 000-30-03</a>
+            <!-- <a href="#" class="btn btn-login">Войти  </a> -->
+            <div class="dropdown dropdown--login">
+              <a id="dropdown-login" href="#" class="dropdown__toggler btn btn-login" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Войти</a>
+              <div class="dropdown__menu dropdown__menu--right" aria-labelledby="dropdown-login">
+                <form action="https://httpbin.org/post" method="post">
+                  <label class="field-text">
+                    <span class="field-text__name">Email:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="email" placeholder="Введите email" id name>
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Пароль:<span>*</span></span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="password" placeholder="Введите пароль" id name>
+                    </span>
+                  </label>
+                  <div class="field-checkbox">
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" id name checked>
+                        <span class="field-checkbox__name-text">Запомнить меня</span>
+                      </label>
+                      <div class="field-checkbox__help-text-wrap">
+                        <div class="field-checkbox__help-text">Не рекомендуется на общедоступных компьютерах</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-actions">
+                    <a href="#" class="btn">Войти</a>
+                    <div class="field-link"><a href="#">Вступить в Ассоциацию</a></div>
+                    <div class="field-link"><a href="#">Забыли пароль?</a></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+          </div>
+        </div>
+      </header>
+      <main role="main">
+        <section class="page-intro" style="background-image: url(img/intro-event-img.jpg);">
+          <div class="page-intro__top">
+            <a href="#" class="come-back"><svg class="event-card__location-icon" width="30" height="6"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#come-back-arrow"/></svg>Назад</a>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Календарь мероприятий</a></li>
+              <li class="breadcrumbs__item"><span class="breadcrumbs__link">Название мероприятия</span></li>
+            </ul>
+          </div>
+          <div class="container">
+            <h1 class="page-intro__title wow fadeInUp">Название мероприятия</h1>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <div class="event-board">
+              <div class="event-board__row">
+                <div class="event-board__col-l">
+                  <div class="event-board__part">
+                    <div class="event-board__part-title">17 АВГУСТА 2022</div>
+                    <div class="event-board__part-item ptime">
+                      <svg class="event-board__part-icon" width="46" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#watch"/></svg>
+                      <span class="event-board__part-time">10:30 - 11:50</span>
+                    </div>
+                  </div>
+                  <div class="event-board__part">
+                    <div class="event-board__part-title">Кредит часы: 6</div>
+                  </div>
+                  <div class="event-board__part">
+                    <div class="event-board__part-item">
+                      <svg class="event-board__part-icon" width="46" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#location"/></svg>
+                      <span>Москва. ул. Большая д.56, к.1, офис 45А</span>
+                    </div>
+                    <div class="event-board__part-item">
+                      <svg class="event-board__part-icon" width="46" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#complete"/></svg>
+                      <span>Вы зарегистрированы на трансляцию</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-board__col-r">
+                  <div class="event-board__main line">
+                    <div class="section__title-1">
+                      <h2>Школа</h2>
+                      <span>School</span>
+                    </div>
+                    <div class="event-board__name">Название мероприятия</div>
+                    <div class="event-board__day">Первый день</div>
+                    <div class="event-board__btns">
+                      <div class="event-board__btn-item"><a href="#" class="btn">Спонсоры мероприятия</a></div>
+                      <div class="event-board__btn-item"><a href="#" class="btn">Регистрация на трансляцию</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="event-board__row">
+                <div class="event-board__col-l">
+                  <div class="social">
+                    <div class="social__title">Поделиться:</div>
+                    <div class="social__list">
+                      <a href="#" target="_blank" class="social__item"><img src="img/social-vk.png" alt></a>
+                      <a href="#" target="_blank" class="social__item"><img src="img/social-ok.png" alt></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="event-board__col-r">
+                  <div class="event-board__main">
+                    <div class="event-board__detal">
+                      <div class="event-board__detal-item">
+                        <div class="event-board__detal-title">Специальности:</div>
+                        <div class="event-board__detal-caption">Название специальности, Название специальности</div>
+                      </div>
+                      <div class="event-board__detal-item">
+                        <div class="event-board__detal-title">Формат мероприятия:</div>
+                        <div class="event-board__detal-caption">
+                          <span class="event-status event-status--offline">offline</span>
+                          <span class="event-status event-status--online">online</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section pt-0">
+          <div class="container">
+            <div class="program">
+              <h2>Программа</h2>
+              <div class="program__list">
+                <div class="program__item">
+                  <div class="program__card">
+                    <div class="program__card-head">
+                      <div>Модератор:</div>
+                      <div>д.м.н., профессор Рачин Андрей Петрович</div>
+                    </div>
+                    <div class="program__card-body">
+                      <div class="program__card-time">
+                        <span>10:00 — 10:10</span>
+                      </div>
+                      <div class="program__card-caption">
+                        <div class="program__card-title">Открытие Всероссийской онлайн-школы. Приветствие участникам.</div>
+                        <div class="program__card-info">
+                          <p><strong>Рачин Андрей Петрович</strong> – д.м.н., профессор, заместитель директора по научной работе, заведующий отделом нейрореабилитации и клинической психологии ФГБУ «Национальный медицинский исследовательский центр реабилитации и курортологии» Министерства здравоохранения Российской Федерации, Президент Национальной ассоциации экспертов по коморбидной неврологии. (Москва)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="program__item">
+                  <div class="program__card">
+                    <div class="program__card-head">
+                      <div>Модератор:</div>
+                      <div>д.м.н., профессор Рачин Андрей Петрович</div>
+                    </div>
+                    <div class="program__card-body">
+                      <div class="program__card-time">
+                        <span>10:00 — 10:10</span>
+                      </div>
+                      <div class="program__card-caption">
+                        <div class="program__card-title">Открытие Всероссийской онлайн-школы. Приветствие участникам.</div>
+                        <div class="program__card-info">
+                          <p><strong>Рачин Андрей Петрович</strong> – д.м.н., профессор, заместитель директора по научной работе, заведующий отделом нейрореабилитации и клинической психологии ФГБУ «Национальный медицинский исследовательский центр реабилитации и курортологии» Министерства здравоохранения Российской Федерации, Президент Национальной ассоциации экспертов по коморбидной неврологии. (Москва)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="program__item">
+                  <div class="program__card">
+                    <div class="program__card-head">
+                      <div>Модератор:</div>
+                      <div>д.м.н., профессор Рачин Андрей Петрович</div>
+                    </div>
+                    <div class="program__card-body">
+                      <div class="program__card-time">
+                        <span>10:00 — 10:10</span>
+                      </div>
+                      <div class="program__card-caption">
+                        <div class="program__card-title">Открытие Всероссийской онлайн-школы. Приветствие участникам.</div>
+                        <div class="program__card-info">
+                          <p><strong>Рачин Андрей Петрович</strong> – д.м.н., профессор, заместитель директора по научной работе, заведующий отделом нейрореабилитации и клинической психологии ФГБУ «Национальный медицинский исследовательский центр реабилитации и курортологии» Министерства здравоохранения Российской Федерации, Президент Национальной ассоциации экспертов по коморбидной неврологии. (Москва)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section pt-0">
+          <div class="container">
+            <h2>Описание</h2>
+            <p><b>Таким образом, современная методология разработки играет определяющее значение для системы массового участия.</b></p>
+            <p>Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: выбранный нами инновационный путь представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+            <p>Предварительные выводы неутешительны: дальнейшее развитие различных форм деятельности способствует повышению качества кластеризации усилий. Господа, начало повседневной работы по формированию позиции позволяет оценить значение существующих финансовых и административных условий. Равным образом, граница обучения кадров создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса благоприятных перспектив. Следует отметить, что экономическая повестка сегодняшнего дня обеспечивает широкому кругу (специалистов)</p>
+            <p>Не следует, однако, забывать, что современная методология разработки предоставляет широкие возможности для соответствующих условий активизации.</p>
+          </div>
+        </section>
+        <section class="section pt-0">
+          <div class="container">
+            <h2>Видеогалерея</h2>
+            <div class="video-gallery">
+              <div class="video-gallery__view">
+                <div class="videoar-card-wrap">
+                  <a class="videoar-card__viev" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                    <img src="img/demo-video-prev-2.jpg" alt>
+                  </a>
+                </div>
+              </div>
+              <div class="video-gallery__list-wrap">
+                <div class="video-gallery__list">
+                  <div class="video-gallery__item">
+                    <a href="#" class="video-gallery__link">
+                      Таким образом, современная методология разработки играет определяющее
+                    </a>
+                  </div>
+                  <div class="video-gallery__item">
+                    <a href="#" class="video-gallery__link">
+                      Таким образом, современная методология разработки играет определяющее
+                    </a>
+                  </div>
+                  <div class="video-gallery__item">
+                    <a href="#" class="video-gallery__link">
+                      Таким образом, современная методология разработки играет определяющее
+                    </a>
+                  </div>
+                  <div class="video-gallery__item">
+                    <a href="#" class="video-gallery__link">
+                      Таким образом, современная методология разработки играет определяющее
+                    </a>
+                  </div>
+                  <div class="video-gallery__item">
+                    <a href="#" class="video-gallery__link">
+                      Таким образом, современная методология разработки играет определяющее
+                    </a>
+                  </div>
+                  <div class="video-gallery__item">
+                    <a href="#" class="video-gallery__link">
+                      Таким образом, современная методология разработки играет определяющее
+                    </a>
+                  </div>
+                  <div class="video-gallery__item">
+                    <a href="#" class="video-gallery__link">
+                      Таким образом, современная методология разработки играет определяющее
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="container">
+          <div class="page-footer__top">
+            <div class="page-footer__logo">
+              <img src="img/logo.svg" alt>
+            </div>
+            <div class="page-footer__links">
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">АССОЦИАЦИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Об Ассоциации</a></li>
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Партнеры</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">МЕРОПРИЯТИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Календарь мероприятий</a></li>
+                  <li><a href="#">Практическая деятельность</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">ДЛЯ ПОЛЬЗОВАТЕЛЕЙ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Личный кабинет</a></li>
+                  <li><a href="#">Вступить в Ассоциацию</a></li>
+                  <li><a href="#">Видеоархив</a></li>
+                </ul>
+              </div>
+              <div class="page-footer__ls-part">
+                <div class="page-footer__ls-title">ИНФОРМАЦИЯ</div>
+                <ul class="page-footer__ls-list">
+                  <li><a href="#">Спонсорам</a></li>
+                  <li><a href="#">Вопросы и ответы</a></li>
+                  <li><a href="#">Политика конфиденциальности</a></li>
+                  <li><a href="#">Документы</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="page-footer__bottom">
+            <div class="copyright">Все права защищены © Национальная ассоциация экспертов по санаторно-курортному лечению</div>
+            <div class="copyright-date">2022 год</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div id="faq-popup" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog container" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <div class="section__title-1">
+            <h2>Поздравляем</h2>
+            <span>Congratulate</span>
+          </div>
+        </div>
+        <div class="modal__body">
+          <p>Вопрос успешно отправлен! Мы скоро с вами свяжемся.</p>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">На главную</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="request-popup" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog container" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <div class="section__title-1">
+            <h2>Поздравляем</h2>
+            <span>Congratulate</span>
+          </div>
+        </div>
+        <div class="modal__body">
+          <p>Заявка успешно отправлена! Мы скоро с вами свяжемся.</p>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">На главную</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="registration-popup" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog container" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <div class="section__title-1">
+            <h2>Поздравляем</h2>
+            <span>Congratulate</span>
+          </div>
+        </div>
+        <div class="modal__body">
+          <p>Регистрация успешно завершена! Мы скоро с вами свяжемся.</p>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn" data-dismiss="modal">На главную</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+</html>
