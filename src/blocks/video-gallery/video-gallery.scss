@@ -1,0 +1,68 @@
+// В этом файле должны быть стили для БЭМ-блока video-gallery, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.video-gallery {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include row;
+
+  &__view {
+    @include col();
+    @include col(lg, 6);
+  }
+
+  &__list-wrap {
+    @include col();
+    @include col(lg, 6);
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    background: #fff;
+    border-radius: 10px;
+    overflow: auto;
+    max-height: 273px;
+
+    @media (min-width:$screen-xl) {
+      max-height: 334px;
+    }
+
+    @media (min-width:$screen-xxl) {
+      max-height: 370px;
+    }
+  }
+
+  &__item {
+    border-bottom: 0.5px solid #D9D9D9;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 15px 15px  15px 70px;
+    position: relative;
+    min-height: 69px;
+
+    &:before {
+      content: "";
+      width: 39px;
+      height: 39px;
+      background-image: url(../img/play-icon.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
+
+    @media (min-width:$screen-xxl) {
+      font-size: 18px;
+    }
+  }
+}

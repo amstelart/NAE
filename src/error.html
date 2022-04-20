@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NAE</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content page__content--error" style="background-image: url(img/intro-error-img.jpg);">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main">
+        <section class="section">
+          <div class="container">
+            <div class="error-box">
+              <div class="error-box__text">Мы не можем найти страницу, которую вы ищете :(</div>
+              <div class="error-box__title">404</div>
+              <a href="index.html" class="btn error-box__btn">На главную страницу</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/modal/modal.html')
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

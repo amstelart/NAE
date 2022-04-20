@@ -30,6 +30,12 @@
 
   &__content {
     flex-grow: 1;
+
+    &--error {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   }
 
   &__footer-wrapper {

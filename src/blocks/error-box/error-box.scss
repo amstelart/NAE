@@ -1,0 +1,43 @@
+// В этом файле должны быть стили для БЭМ-блока error-box, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.error-box {
+
+  $block-name:                &; // #{$block-name}__element
+
+  text-align: center;
+  color: #fff;
+  padding: 120px 0 25px 0;
+  
+  @media (min-width:$screen-md) {
+    padding: 60px 0;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.2;
+
+    @media (min-width:$screen-md) {
+      font-size: 28px;
+    }
+    @media (min-width:$screen-xxl) {
+      font-size: 48px;
+    }
+  }
+
+  &__title {
+    font-family: $font-family--serif;
+    // font-size: 690px;
+    font-size: 35vw;
+    line-height: 1;
+  }
+
+  &__btn {
+    margin-top: 60px;
+    
+    @media (min-width:$screen-md) {
+      min-width: 358px;
+    }
+  }
+}

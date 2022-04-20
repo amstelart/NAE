@@ -84,7 +84,12 @@
     "main-carousel": [],
     "last-news": [],
     "field-captcha": [],
-    "sound-btn": []
+    "sound-btn": [],
+    "program": [],
+    "event-board": [],
+    "social": [],
+    "error-box": [],
+    "video-gallery": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

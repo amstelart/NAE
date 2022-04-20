@@ -89,6 +89,8 @@
   .logo {
     flex-shrink: 0;
     z-index: 11;
+    width: 82px;
+    height: 82px;
 
     @media (max-width: ($screen-xl - 1)) {
       width: 65px;
