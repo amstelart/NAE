@@ -89,7 +89,8 @@
     "event-board": [],
     "social": [],
     "error-box": [],
-    "video-gallery": []
+    "video-gallery": [],
+    "user-card": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

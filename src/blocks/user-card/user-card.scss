@@ -1,0 +1,114 @@
+// В этом файле должны быть стили для БЭМ-блока user-card, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.user-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+
+  @media (max-width:($screen-md - 1)) {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__view {
+
+    flex-shrink: 0;
+    margin-right: 35px;
+
+    @media (min-width:$screen-lg) {
+      margin-right: 40px;
+    }
+
+    @media (min-width:$screen-xxl) {
+      margin-right: 80px;
+    }
+  }
+
+  &__pic {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+
+    @media (min-width:$screen-xl) {
+      width: 354px;
+      height: 354px;
+    }
+  }
+
+  &__pic-wrap {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__link {
+    display: block;
+    width: 52px;
+    height: 52px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url(../img/user-link-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all $transition-time;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width:$screen-xl) {
+      width: 71px;
+      height: 71px;
+    }
+  }
+
+  &__body {
+    padding: 30px 0;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 1.2;
+
+    @media (min-width:$screen-lg) {
+      font-size: 22px;
+    }
+
+    @media (min-width:$screen-xxl) {
+      font-size: 36px;
+    }
+  }
+
+  &__name {
+    font-family: $font-family--serif;
+    font-size: 28px;
+    line-height: 1.2;
+
+    @media (min-width:$screen-lg) {
+      font-size: 42px;
+    }
+
+    @media (min-width:$screen-xxl) {
+      font-size: 58px;
+    }
+  }
+}
