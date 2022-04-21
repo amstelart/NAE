@@ -23,9 +23,11 @@
     
     .event-card {
       display: flex;
+      flex-direction: row;
       padding: 34px 55px;
       background-color: #fff;
       border-radius: 10px;
+      height: inherit;
   
       &__viev {
         flex-basis: 40%;

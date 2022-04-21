@@ -6,6 +6,10 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
   &__viev {
     border-radius: 10px;
     position: relative;
@@ -26,6 +30,9 @@
   &__inner {
     background-color: #fff;
     padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   &__head {
@@ -34,6 +41,9 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 15px;
+  }
+
+  &__body {
   }
 
   &__date {
@@ -127,6 +137,10 @@
   &__location-icon {
     display: inline-block;
     vertical-align: middle;
+  }
+
+  &__action {
+    margin-top: auto;
   }
 
   &__btn {

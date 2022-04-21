@@ -46,7 +46,7 @@
       if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains($parent[0], e.target)) return
 
       // Выходим, если клик пришелся на элемент внутри .dropdown__menu
-      if (e && e.type == 'click' && /dropdown__menu/i.test(e.toElement.offsetParent.className)) return
+      // if (e && e.type == 'click' && /dropdown__menu/i.test(e.toElement.offsetParent.className)) return
 
       // $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
       // $parent.trigger(e = $.Event('hide.nth.dropdown', relatedTarget))
